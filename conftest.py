@@ -13,7 +13,7 @@ def driver(request):
     options = Options()
     languages = request.config.getoption("language")
     options.add_experimental_option('prefs', {'intl.accept_languages': languages})
-    driver = webdriver.Chrome("C:/Drivers/chromedriver.exe", options=options)
+    driver = webdriver.Chrome(options=options)
     yield driver
     driver.quit()
 
