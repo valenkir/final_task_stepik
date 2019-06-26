@@ -17,6 +17,11 @@ class LoginPageLocators:
 
 
 class ProductPageLocators:
-    ADD_TO_BASKET_BUTTON = (By.CLASS_NAME, ".btn-add-to-basket")
+    ADD_TO_BASKET_BUTTON = (By.CLASS_NAME, "btn-add-to-basket")
     PRODUCT_NAME = (By.TAG_NAME, "h1")
+    PRODUCT_PRICE = (By.CLASS_NAME, "price_color")
+    PRODUCT_PRICE_IN_SUCCESS_MESSAGE = (By.XPATH, "//div[@class='alertinner ']/p/strong")
+    PRODUCT_NAME_IN_SUCCESS_MESSAGE = (By.XPATH, "//div[@class='alertinner ']/strong[1]")
+
+
 
