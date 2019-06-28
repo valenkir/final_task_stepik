@@ -33,15 +33,14 @@ class ProductPage(BasePage):
                                                                       "price of the product selected on the product "
                                                                         "page")
 
-    def should_not_display_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_NAME_SUCCESS_MESSAGE) and self\
-            .is_not_element_present(*ProductPageLocators.PRODUCT_OFFER_SUCCESS_MESSAGE) and self.\
-            is_not_element_present(*ProductPageLocators.PRODUCT_PRICE_SUCCESS_MESSAGE), "Success message is displayed," \
-                                                                                       "but shouldn't"
-
     def should_disappear_success_message(self):
         assert self.is_disappeared(*ProductPageLocators.PRODUCT_NAME_SUCCESS_MESSAGE) and self\
             .is_disappeared(*ProductPageLocators.PRODUCT_OFFER_SUCCESS_MESSAGE) and self.\
             is_disappeared(*ProductPageLocators.PRODUCT_PRICE_SUCCESS_MESSAGE), "Success message is displayed, " \
                                                                                "but shouldn't"
 
+    def should_not_display_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_NAME_SUCCESS_MESSAGE) and self\
+            .is_not_element_present(*ProductPageLocators.PRODUCT_OFFER_SUCCESS_MESSAGE) and self.\
+            is_not_element_present(*ProductPageLocators.PRODUCT_PRICE_SUCCESS_MESSAGE), "Success message is displayed," \
+                                                                                       "but shouldn't"

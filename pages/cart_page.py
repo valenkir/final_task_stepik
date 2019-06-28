@@ -7,7 +7,7 @@ class CartPage(BasePage):
     def should_be_empty_cart(self):
         empty_cart_message_element = self.driver.find_element(*CartPageLocators.EMPTY_CART_MESSAGE_BLOCK)
         empty_cart_message = empty_cart_message_element.text
-        print(empty_cart_message)
+        # print(empty_cart_message)
         empty_cart_text = "Your basket is empty. Continue shopping"
         assert empty_cart_message == empty_cart_text, "The Cart is not empty"
 

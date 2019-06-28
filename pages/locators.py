@@ -1,11 +1,14 @@
 from selenium.webdriver.common.by import By
 
+
 class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     CART_BUTTON = (By.XPATH, "//a[@class='btn btn-default']")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
-#class MainPageLocators:
-    #LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+
+# class MainPageLocators:
+    # LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
 class LoginPageLocators:
@@ -28,6 +31,7 @@ class ProductPageLocators:
     PRODUCT_NAME_SUCCESS_MESSAGE = (By.XPATH, "//div[@id='messages']/div[1]/div")
     PRODUCT_OFFER_SUCCESS_MESSAGE = (By.XPATH, "//div[@id='messages']/div[2]/div")
     PRODUCT_PRICE_SUCCESS_MESSAGE = (By.XPATH, "//div[@id='messages']/div[3]/div")
+
 
 class CartPageLocators:
     EMPTY_CART_MESSAGE_BLOCK = (By.XPATH, "//div[@id='content_inner']/p")
