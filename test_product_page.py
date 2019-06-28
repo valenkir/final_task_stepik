@@ -22,6 +22,7 @@ def test_guest_cant_see_success_message(driver):
                                  # "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer7",
                                  # "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
                                  # "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"])
+@pytest.mark.need_review
 def test_guest_can_add_product_to_cart(driver):
     product_link = " http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
     page = ProductPage(driver, product_link)
@@ -29,6 +30,7 @@ def test_guest_can_add_product_to_cart(driver):
     page.add_product_to_cart()
 
 
+@pytest.mark.need_review
 def test_guest_can_go_to_login_page_from_product_page(driver):
     link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
     page = ProductPage(driver, link)
@@ -38,6 +40,7 @@ def test_guest_can_go_to_login_page_from_product_page(driver):
     login_page.should_be_login_page()
 
 
+@pytest.mark.need_review
 def test_guest_cant_see_product_in_cart_opened_from_product_page(driver):
     link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
     page = ProductPage(driver, link)
@@ -71,6 +74,7 @@ class TestUserAddToCartFromProductPage:
         page.open()
         page.should_not_display_success_message()
 
+    @pytest.mark.need_review
     def test_user_can_add_product_to_cart(self, driver):
         product_link = " http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         page = ProductPage(driver, product_link)
